@@ -1,0 +1,223 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    font-family: sans-serif;
+    letter-spacing: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+}
+.bgr-section, .thanks-section{
+    width: 100%;
+    height: 100vh;
+    background: url(/background.jpg) no-repeat ;
+    opacity: 0.9;
+    background-size: cover;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: rgba(149, 108, 81, 0.5);
+    margin: 14% auto;
+    padding: 2rem;
+    border: none;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0.20rem 0.5rem 0.5rem #fff, -0.20rem -0.5rem 0.5rem #fff;
+    z-index: 9999;
+    transition: box-shadow 0.3s;
+}
+.modal-content form {
+    height: 30rem;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+}
+.modal-content:hover{
+    box-shadow: 0.10rem 0.2rem 0.2rem #000, -0.10rem -0.2rem 0.2rem #fff;
+}
+.modal-content h2{
+    text-align: center;
+    color: #fff;
+}
+.modal-content label{
+    color: #fff;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+
+.modal-form input,
+.modal-form textarea {
+    width: 97%;
+    margin: 0.5rem 0;
+    padding: 0.6rem;
+    font-size: 1rem;
+}
+
+.modal-form button {
+    width: 100%;
+    padding: 1rem 4rem;
+    font-size: 1.5rem;
+    background-color: rgb(64, 46, 35);
+    color: #fff;
+    border: 0.01rem solid #fff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    letter-spacing: 0.2rem;
+}
+.items-btn{
+    text-align: center;
+    line-height: 3rem;
+    width: 30rem;
+    height: 3rem;
+    top: 10%;
+    padding: 2rem;
+    position: relative;
+    cursor: pointer;
+    background-color: #fff;
+    color: rgba(149, 108, 81, 0.5);
+    border-radius: 2rem;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0.15rem 0.3rem 0.4rem #000, -0.15rem -0.3rem 0.4rem #000;
+    z-index: 9999;
+    transition: box-shadow 0.3s;
+}
+.items-btn:hover{
+    box-shadow: 0.10rem 0.2rem 0.1rem #000, -0.10rem -0.2rem 0.1rem #000;
+}
+
+.menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(/background.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    max-height: 180vh;
+    padding: 5rem 0;
+
+}
+.list-title{
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 3rem;
+    color: #fff;
+}
+.menuitems-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 90%;
+    height: 60%;
+    padding: 2rem;
+    margin: 3rem;
+}
+
+.menu-item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    border: rgba(149, 108, 81, 0.5) 0.1rem solid;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(149, 108, 81, 0.5), -0.2rem -0.2rem 0.5rem rgba(149, 108, 81, 0.5);
+    border-radius: 1rem;
+}
+.back-home-btn{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 18rem;
+    height: 1.8rem;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    background-color: #fff;
+    color: rgba(149, 108, 81, 0.5);
+    border-radius: 2rem;
+    text-decoration: none;
+    border: none;
+    margin-bottom: 5rem;
+    box-shadow: 0.15rem 0.2rem 0.2rem #000, -0.15rem -0.2rem 0.2rem #000;
+    transition: box-shadow 0.3s;
+}
+.back-home-btn:hover{
+    box-shadow: 0.10rem 0.1rem 0.1rem #000, -0.10rem -0.1rem 0.1rem #000;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.trash-btn, .edit-btn, .save-btn{
+    cursor: pointer;
+}
+.save-btn{
+    border: none;
+    background: none;
+    color: #000;
+}
+.cart-btn{
+    border: none;
+    background: none;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+}
+.empty-msg{
+    color: #fff;
+    font-size: 3rem;
+}
+.cart-total{
+    color: #ffffff; 
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    margin-top: 3rem;
+    font-weight: 800;
+}
+
+.thank-you-message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    font-size: 3rem;
+}
+.thank-you-message a{
+    color: #0b3569;
+    text-decoration: none;
+    margin-top: 3rem;
+    text-shadow: 0.2rem 0.5rem 0.8rem #fff, -0.2rem -0.5rem 0.8rem #fff;
+    transition: all 0.3s;
+}
+.thank-you-message a:hover{
+    color: #fff;
+    text-shadow: 0.2rem 0.5rem 0.8rem #0b3569, -0.2rem -0.5rem 0.8rem #0b3569;
+}

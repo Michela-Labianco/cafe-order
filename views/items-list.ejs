@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Book</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body data-page="menu-list">
+    <section class="menu-container">
+        <% if (items.length === 0) { %>
+            <h1 class="list-title" style="display: none;">Your order</h1>
+        <% } else { %>
+            <h1 class="list-title"> Your order</h1>
+        <% } %>
+        
+        <div class="menuitems-container">
+            <% if (items.length > 0) { %>
+                <% items.forEach(item => { %>
+                <div class="menu-item" data-id="<%= item._id %>"> <!-- the _id in mongoDB Its due to this line -->
+                    <p class="name-name"><strong>Name:</strong> <%= item.name %></p>
+                    <p class="name-description"><strong>Description:</strong> <%= item.description %></p>
+                    <p class="name-price"><strong>Price:</strong> <%= item.price %></p>
+                    <div class="icons">
+                        <i class="fa-solid fa-pen edit-btn"></i>
+                        <i class="fa-solid fa-trash trash-btn"></i>
+                        <button class="save-btn" style="display: none;"><i class="fas fa-save"></i></button>
+                    </div>
+                </div>
+                <% }) %>
+            <% } %>
+            <!-- to conditionally render it visible or hidden based on whether there are any items -->
+            <% if (items.length === 0) { %>
+                <p class="empty-msg">Sorry, no items yet.</p>
+            <% } else { %>
+                <p class="empty-msg" style="display: none;">Sorry, no items yet.</p>
+            <% } %>
+        </div> 
+        <a href="/" class="back-home-btn">Back to Order</a> 
+        <button class="cart-btn" style="display: none;">
+            <i class="fas fa-cart-shopping"></i>
+        </button>
+        <div class="cart-total">Total: $<span id="total-price">0.00</span></div>
+    </section>
+    <script src="/script.js"></script>
+</body>
+</html>
